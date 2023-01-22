@@ -9,4 +9,7 @@ public final class EndpointURI {
 	
 	public static final String ADD_CLASS = BASE_API_PATH + "class";
 
+
+	public static final String GET_GRADES = BASE_API_PATH + "grades";
+
 }
