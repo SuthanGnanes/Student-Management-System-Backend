@@ -18,10 +18,6 @@ public class Classes {
 	private Long id;
 	private String name;
 	
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "gradeId", nullable = false)
-	private Grades grade;
-	
 	@ManyToOne(fetch = FetchType.EAGER, optional = true)
 	@JoinColumn(name = "instructorId", nullable = true)
 	private Instructors instructor;
@@ -37,6 +33,12 @@ public class Classes {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public Instructors getInstructor() {
+		return instructor;
+	}
+	public void setInstructor(Instructors instructor) {
+		this.instructor = instructor;
 	}	
 	
 	

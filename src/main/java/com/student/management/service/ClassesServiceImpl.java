@@ -1,5 +1,7 @@
 package com.student.management.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +16,18 @@ public class ClassesServiceImpl implements ClassesService {
 	
 
 	@Override
-	public void createClass(Classes classes) {
-		classesRepository.save(classes);
+	public Long createClass(Classes classes) {
+		Classes classesRtn = classesRepository.save(classes);
+		return classesRtn.getId();
 		
+		
+	}
+
+
+	@Override
+	public Optional<Classes> getClassByClassesIdAndGradeId(Long classesId, Long gradeId) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
 	}	
 	
 }

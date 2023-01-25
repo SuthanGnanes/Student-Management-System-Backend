@@ -6,10 +6,13 @@ public class StudentsResponceDto {
 	//should validate
 	private String name;
 	//should validate
-	private String eMail;
+	private String email;
+	private Long gradeId;
 	private String gradeName;
 	private String InstructorName;
+	private Long classesId;
 	private String classesName;
+	
 	
 	public Long getId() {
 		return id;
@@ -23,11 +26,17 @@ public class StudentsResponceDto {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String geteMail() {
-		return eMail;
+	public String getEmail() {
+		return email;
 	}
-	public void seteMail(String eMail) {
-		this.eMail = eMail;
+	public void setEmail(String eMail) {
+		this.email = eMail;
+	}
+	public Long getGradeId() {
+		return gradeId;
+	}
+	public void setGradeId(Long gradeId) {
+		this.gradeId = gradeId;
 	}
 	public String getGradeName() {
 		return gradeName;
@@ -40,6 +49,12 @@ public class StudentsResponceDto {
 	}
 	public void setInstructorName(String instructorName) {
 		InstructorName = instructorName;
+	}
+	public Long getClassesId() {
+		return classesId;
+	}
+	public void setClassesId(Long classesId) {
+		this.classesId = classesId;
 	}
 	public String getClassesName() {
 		return classesName;

@@ -19,8 +19,18 @@ public class StudentsServiceImpl implements StudentsService {
 		studentsRepository.save(student);
 	}
 	
+	public void createStudents(List<Students> students) {
+		studentsRepository.saveAll(students);
+	}
+	
+	
 	@Override
 	public List<Students> listingStudents(){
 		return studentsRepository.findAll();
+	}
+
+	@Override
+	public boolean isEmailAlreadyExist(String email) {
+		return studentsRepository.existsByEmail(email);
 	}
 }

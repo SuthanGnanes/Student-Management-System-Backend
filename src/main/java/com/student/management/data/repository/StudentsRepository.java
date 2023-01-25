@@ -6,4 +6,7 @@ import com.student.management.data.entity.Students;
 
 public interface StudentsRepository extends JpaRepository<Students, Long>{
 
+
+	boolean existsByEmail(String email);
+
 }
